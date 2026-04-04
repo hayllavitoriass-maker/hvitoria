@@ -1,6 +1,6 @@
 # LOVIE Premium Motion (Remotion)
 
-Animação de branding premium para a marca LOVIE AGÊNCIA, com formação progressiva da palavra, detalhe superior poético e entrada sutil de subtítulo.
+Animação premium da marca LOVIE AGÊNCIA com construção tipográfica progressiva inspirada na logo original (L, O vazado, V, I, E serifado, traço inferior, detalhe superior e subtítulo AGÊNCIA).
 
 ## Como rodar
 
@@ -15,17 +15,22 @@ npm run start
 npm run render
 ```
 
+Saída esperada:
+
+- `out/lovie-premium.mp4`
+
 ## Estrutura
 
 - `src/compositions/LoviePremium.tsx`: timeline principal (7 segundos @ 30fps)
 - `src/components/Background.tsx`: fundo azul marinho com profundidade sutil
-- `src/components/WordConstruction.tsx`: construção real da palavra LOVIE por traços + reveals
-- `src/components/TopDetail.tsx`: coração temporário que resolve para marca final superior
+- `src/components/WordConstruction.tsx`: construção vetorial da palavra LOVIE
+- `src/components/TopDetail.tsx`: traço superior + coração temporário elegante
 - `src/components/BaselineStroke.tsx`: traço inferior condutor
-- `src/components/SubtitleAgencia.tsx`: entrada final de "AGÊNCIA"
+- `src/components/SubtitleAgencia.tsx`: entrada final discreta de `. AGÊNCIA`
+- `src/components/palette.ts`: tokens de cor
 
 ## Ajustes rápidos
 
 - Duração: `LOVIE_DURATION` em `LoviePremium.tsx`
 - Cores: `src/components/palette.ts`
-- Timing por elemento: ranges de `interpolate()` em cada componente
+- Timing: ranges de `interpolate()` nos componentes
